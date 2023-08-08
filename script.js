@@ -1,16 +1,10 @@
 const numberButtons = document.querySelectorAll('[data-number]');
 const operatorButtons = document.querySelectorAll('[data-operation]');
 const equalButton = document.querySelector('[data-equal]');
+const decimalButton = document.querySelector('[data-decimal]');
 const clearScreenButton = document.querySelector('[data-clear-screen]');
 const screen = document.querySelector('.display');
 let str;
-
-
-// function typeNumber(btn) {
-//     const btnValue = btn.innerText;
-//     screen.innerText = btn
-// }
-
 
 numberButtons.forEach(button => {
     button.addEventListener('click', function(){
@@ -45,4 +39,8 @@ equalButton.addEventListener('click', function() {
 });
 
 
-
+decimalButton.addEventListener('click', function() {
+        const btnValue = decimalButton.innerText;
+        str = screen.innerText.concat("", btnValue); 
+        screen.innerText = str;
+});
