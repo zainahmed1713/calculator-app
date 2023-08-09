@@ -39,7 +39,7 @@
 .top p {
     font-size: 1.5rem;
     position: relative;
-    transform: translate(-5%, 880%);
+    transform: translate(-5%, 680%);
     margin-left: 25px;
     
 }
@@ -106,7 +106,7 @@
     .top p {
         font-size: 1.5rem;
         position: relative;
-        transform: translate(-5%, 1080%);
+        transform: translate(-5%, 880%);
         margin-left: 25px;
         
     }
