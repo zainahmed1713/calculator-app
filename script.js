@@ -4,6 +4,7 @@ const equalButton = document.querySelector('[data-equal]');
 const bracketsButton = document.querySelector('[data-brackets]');
 const decimalButton = document.querySelector('[data-decimal]');
 const clearScreenButton = document.querySelector('[data-clear-screen]');
+const eraseButton = document.querySelector('[data-clear]');
 const screen = document.querySelector('.display');
 let str;
 let count = 1;
@@ -24,11 +25,10 @@ clearScreenButton.addEventListener('click', function() {
 
 operatorButtons.forEach(button => {
     button.addEventListener('click', function() {
+        let btnValue = button.innerText;
         if(button.innerText === 'x') {
-            button.innerText = '*';
+            btnValue = '*';
         }
-
-        const btnValue = button.innerText;
         str = screen.innerText.concat("", btnValue); 
         screen.innerText = str;
     });
@@ -64,3 +64,8 @@ bracketsButton.addEventListener('click', function() {
     }
 });
 
+
+eraseButton.addEventListener('click', function() {
+    str = str.slice(0, -1);
+    screen.innerText = str;
+});
